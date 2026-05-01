@@ -4,58 +4,70 @@ export interface Mission {
   title: string;
   description: string;
   duration: number; // in minutes
+  benefit?: string;
+  guidance?: string;
 }
 
 export const MISSIONS: Mission[] = [
   {
     id: 1,
     title: "Gratitude Silencieuse",
-    description: "Assieds-toi confortablement. Ferme les yeux et identifie trois petites choses pour lesquelles tu es reconnaissant aujourd'hui. Visualise-les intensément."
+    description: "Assieds-toi confortablement. Ferme les yeux et identifie trois petites choses pour lesquelles tu es reconnaissant aujourd'hui. Visualise-les intensément.",
+    duration: 7
   },
   {
     id: 2,
     title: "Mouvement Fluide",
-    description: "Effectue 7 minutes d'étirements doux. Concentre-toi sur tes épaules, ton cou et ton dos. Respire profondément à chaque mouvement."
+    description: "Effectue 7 minutes d'étirements doux. Concentre-toi sur tes épaules, ton cou et ton dos. Respire profondément à chaque mouvement.",
+    duration: 7
   },
   {
     id: 3,
     title: "Écriture Libératrice",
-    description: "Prends une feuille ou un carnet. Écris sans t'arrêter tout ce qui te passe par la tête, sans juger la qualité ou la grammaire. Vide ton esprit."
+    description: "Prends une feuille ou un carnet. Écris sans t'arrêter tout ce qui te passe par la tête, sans juger la qualité ou la grammaire. Vide ton esprit.",
+    duration: 7
   },
   {
     id: 4,
     title: "Espace Clair",
-    description: "Choisis un petit tiroir, une surface de bureau ou un coin d'étagère. Range-le méticuleusement. Un espace clair favorise un esprit clair."
+    description: "Choisis un petit tiroir, une surface de bureau ou un coin d'étagère. Range-le méticuleusement. Un espace clair favorise un esprit clair.",
+    duration: 7
   },
   {
     id: 5,
     title: "Respiration Carrée",
-    description: "Inspire sur 4 temps, bloque sur 4, expire sur 4, bloque sur 4. Répète ce cycle pour calmer ton système nerveux."
+    description: "Inspire sur 4 temps, bloque sur 4, expire sur 4, bloque sur 4. Répète ce cycle pour calmer ton système nerveux.",
+    duration: 7
   },
   {
     id: 6,
     title: "Vision Future",
-    description: "Ferme les yeux et imagine-toi dans 6 mois après avoir accompli ton objectif principal. Ressens la fierté et la sérénité de ce moment."
+    description: "Ferme les yeux et imagine-toi dans 6 mois après avoir accompli ton objectif principal. Ressens la fierté et la sérénité de ce moment.",
+    duration: 7
   },
   {
     id: 7,
     title: "Écoute Active",
-    description: "Choisis un morceau de musique instrumentale. Écoute-le en essayant de distinguer chaque instrument séparément. Ne fais rien d'autre."
+    description: "Choisis un morceau de musique instrumentale. Écoute-le en essayant de distinguer chaque instrument séparément. Ne fais rien d'autre.",
+    duration: 7
   },
   {
     id: 8,
     title: "Priorités de Demain",
-    description: "Identifie les 3 tâches essentielles que tu veux accomplir demain. Pas plus, juste les 3 plus importantes."
+    description: "Identifie les 3 tâches essentielles que tu veux accomplir demain. Pas plus, juste les 3 plus importantes.",
+    duration: 7
   },
   {
     id: 9,
     title: "Marche de Présence",
-    description: "Marche lentement dans ton espace. À chaque pas, ressens le contact de ton pied avec le sol et le transfert de ton poids."
+    description: "Marche lentement dans ton espace. À chaque pas, ressens le contact de ton pied avec le sol et le transfert de ton poids.",
+    duration: 7
   },
   {
     id: 10,
     title: "Lettre de Bienveillance",
-    description: "Écris un court paragraphe de remerciement à toi-même pour tous les efforts que tu as fournis récemment. Sois ton meilleur ami."
+    description: "Écris un court paragraphe de remerciement à toi-même pour tous les efforts que tu as fournis récemment. Sois ton meilleur ami.",
+    duration: 7
   }
 ];
 
