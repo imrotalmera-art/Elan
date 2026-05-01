@@ -102,7 +102,9 @@ export default function App() {
             </span>
           </div>
           <div className="h-4 w-[1px] bg-stone-200"></div>
-          <span className="text-[10px] uppercase tracking-widest">7 Minutes</span>
+          <span className="text-[10px] uppercase tracking-widest">
+            {mission?.duration || 7} Minutes
+          </span>
         </motion.div>
       </header>
 
@@ -165,9 +167,17 @@ export default function App() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => {
+                  // Reset for testing/demo purposes as requested
+                  setDayCount(0);
+                  localStorage.setItem('mission_day_count', '0');
+                  localStorage.removeItem('last_mission_success');
+                  setIsCycleComplete(false);
+                  resetAll();
+                }}
                 className="inline-flex items-center space-x-4 bg-stone-800 text-white px-10 py-5 rounded-full shadow-lg hover:bg-stone-900 transition-all"
               >
-                <span className="text-sm font-medium tracking-widest uppercase">Débloquer Élan Premium</span>
+                <span className="text-sm font-medium tracking-widest uppercase">Débloquer Élan Premium (Mode Test)</span>
                 <ArrowRight size={18} />
               </motion.button>
 
@@ -302,7 +312,7 @@ export default function App() {
               </div>
 
               <div className="pt-8 border-t border-stone-100 flex flex-col items-center space-y-12">
-                <Timer duration={420} />
+                <Timer duration={(mission?.duration || 7) * 60} />
                 
                 <motion.button
                   id="complete-mission-button"

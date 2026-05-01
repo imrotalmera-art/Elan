@@ -3,6 +3,7 @@ export interface Mission {
   id: number;
   title: string;
   description: string;
+  duration: number; // in minutes
 }
 
 export const MISSIONS: Mission[] = [
